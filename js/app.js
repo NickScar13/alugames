@@ -12,15 +12,16 @@ function alterarStatus(id) {
     //alterar o estado do jogo
     //devolver o jogo
     if (alugado) {
+        if (confirm(`Tem certeza que deseja devolver o jogo ${nome.textContent}?`))
         imagem.classList.remove('dashboard__item__img--rented');
         botao.classList.remove('dashboard__item__button--return');
         botao.textContent =     'Alugar';
-        alert(`O jogo ${nome.textContent} agora esta disponivel`)
+        alert(`O jogo ${nome.textContent} agora esta disponivel para alugar`)
     //alugar o jogo
     } else {
         imagem.classList.add('dashboard__item__img--rented');
         botao.classList.add('dashboard__item__button--return');
-        botao.textContent = 'Devolver'
+        botao.textContent = 'Devolver';
         alert(`O jogo ${nome.textContent} agora esta alugado`);
     }
 }
