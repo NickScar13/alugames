@@ -21,6 +21,6 @@ function alterarStatus(id) {
         imagem.classList.add('dashboard__item__img--rented');
         botao.classList.add('dashboard__item__button--return');
         botao.textContent = 'Devolver'
-        alert(`O jogo ${nome.textContent} agora esta alugado`)
+        alert(`O jogo ${nome.textContent} agora esta alugado`);
     }
 }
